@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galery view</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <ul id="galery">
+        </ul>
+        <form id="form">
+            <input type="text" id="title">
+            <button>Enviar</button>
+            <label for="img">
+                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 22V36H4V8H14.04C14.14 6.58 14.48 5.24 15 4H4C1.8 4 0 5.8 0 8V36C0 38.2 1.8 40 4 40H32C34.2 40 36 38.2 36 36V26L32 22ZM29 32H7L12.5 24.94L16.42 29.66L21.92 22.58L29 32ZM34.6 13.78C35.48 12.38 36 10.76 36 9C36 4.02 31.98 0 27 0C22.02 0 18 4.02 18 9C18 13.98 22.02 18 26.98 18C28.74 18 30.38 17.48 31.76 16.6L38 22.84L40.84 20L34.6 13.78ZM27 14C24.24 14 22 11.76 22 9C22 6.24 24.24 4 27 4C29.76 4 32 6.24 32 9C32 11.76 29.76 14 27 14Z" fill="white"/>
+                </svg>    
+                <input type="file" id="img">
+            </label>
+        </form>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
