@@ -5,27 +5,37 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
+
+li{
+    list-style: none;
+}
+
 body{
     box-sizing: border-box;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: #333;
+    overflow-y: hidden;
 }
 
 #galery{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    overflow-y: auto;
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #333;
+    padding-bottom: 8px;
 }
 
-#galery li{
+#galery ul .text{
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 8px;
@@ -34,25 +44,39 @@ body{
 #galery li span{
     font-size: 14px;
     padding: 4px 8px;
-    background-color: rgba(27, 106, 255, 0.829);
     color: #fff;
     border-radius: 8px;
     margin-top: 4px;
     margin-left: 4px;
 }
 
-#galery li img{
+#galery li .img{
     width: 100px;
-    border-radius: 14px;
+    height: 100px;
     margin-left: 16px;
     margin-top: 4px;
+    position: relative;
 }
 
+#galery li .img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+#galery ul li .img .linkButton{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2222227c;
+}
 
 #form{
     width: 100%;
-    position: absolute;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,6 +129,14 @@ body{
 
 @media(max-width: 500px){
     #galery{
-        height: 93vh;
+        height: 86vh;
     }
+}
+
+.block{
+    display: none;
+}
+
+.hide{
+    display: flex;
 }
