@@ -6,10 +6,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-li{
-    list-style: none;
-}
-
 body{
     box-sizing: border-box;
     position: relative;
@@ -21,6 +17,18 @@ body{
     overflow-y: hidden;
 }
 
+li{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
 #galery{
     width: 100%;
     height: 90vh;
@@ -29,9 +37,17 @@ body{
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
     background-color: #333;
     padding-bottom: 8px;
+}
+
+#galery ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
 #galery ul .text{
@@ -133,10 +149,100 @@ body{
     }
 }
 
+.configButton{
+    background-color: #222;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.configButton svg{
+    width: 16px;
+    cursor: pointer;
+}
+
+.settings{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #2222228a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings #settingsForm{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #222;
+    position: relative;
+}
+
+.settings #settingsForm .close{
+    border-radius: 26px;
+    padding: 5px 8px;
+    background-color: #444;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.settings #settingsForm input[type="text"]{
+    max-width: 100%;
+    border-radius: 4px;
+    background-color: #333;
+    border: none;
+    padding: 4px 8px;
+}
+
+.settings #settingsForm label{
+    color: #fff;
+}
+
+.settings #settingsForm button{
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 400;
+}
+
+.settings #settingsForm .saveBtn{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+.settings #settingsForm .labelInput{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
 .block{
     display: none;
 }
 
-.hide{
+.visible{
     display: flex;
 }

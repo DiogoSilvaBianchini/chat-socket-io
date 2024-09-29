@@ -16,10 +16,7 @@ app.get("/", (req,res) => {
 
 io.on("connection", (socket) => {
     socket.on('front', (user) => {
-        const {userName, title, imgsUploaded} = user
-
-        io.emit('front', {userName, title, imgsUploaded})
-        console.log(user)
+        io.emit('front', user)
     })
 })
 
